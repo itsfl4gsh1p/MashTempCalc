@@ -12,3 +12,6 @@ to raise the temperature to your specified rest temps.
 
 'Boiling' as defined by How to Brew is calculated at 210*F to compensate for any loss in temperature
 during the transfer period from the hot liquor tank to the mash tun.
+Also note ,as with the How to Brew formulas this script is based on, the script does not take into account
+loss of temperature through the mash tun. Both the formula and the script assume that the mash tun has been
+pre-heated with hot water to minimalize the temperature loss between the strike water and the mash tun walls.
