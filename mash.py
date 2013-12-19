@@ -48,14 +48,20 @@ def multi_infusion():
 	while count < nums-1: #subtracting 1 from 'nums' to compensate for list arrays starting at 0
 		count = count + 1 #looping through each value in the list starting at the 2nd item
 		print count
-		next_amt = (temps[count]-temps[count-1])*(.2*grain_wgt+(amts[count-1]+amts[count]))/(210-temps[count])	
-		amts.append(next_amt) 
-		print "The amount of your next boiling water addition will be",round(amts[count+1], 2), "qts to bring the mash temp to:", temps[count],"*F"
+		combined_water = (amts[count-1]+amts[count])
+		amts.append(combined_water)
+		next_amt = (temps[count]-temps[count-1])*((.2*grain_wgt)+combined_water)/(210-temps[count])	
+		amts.append(next_amt)
+		#print amts[1::2]
+		print "The amount of your next boiling water addition will be",round(next_amt, 2), "qts to bring the mash temp to:", temps[count],"*F"
 
-	print amts
-	print temps
-	print temps[0]
-	print temps[1]
+	#print amts
+	#print amts[1]
+	#print amts[3]
+	#print amts[5]
+	#print temps
+	#print temps[0]
+	#print temps[1]
 
 
 
